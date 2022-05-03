@@ -12,18 +12,18 @@ public class Respostas {
         System.out.println("Alfabeto: {a,b}");
         System.out.println("=========================================================================");    
         System.out.println("Resposta para a questão - Começa com aa");//validado!
-        regex_teste= "aa[ab]";
+        regex_teste= "aa[ab]+";
         System.out.println(Pattern.matches(regex_teste,"aaa"));
-        System.out.println(Pattern.matches(regex_teste,"aab"));
+        System.out.println(Pattern.matches(regex_teste,"aaba"));
         System.out.println("=========================================================================");
         System.out.println("Resposta para a questão - Não começa com aa");//validado!
-        regex_teste = "b+[ba]";
+        regex_teste = "b+[ba]+";
         System.out.println(Pattern.matches(regex_teste,"ba"));
-        System.out.println(Pattern.matches(regex_teste,"bb"));
+        System.out.println(Pattern.matches(regex_teste,"bbbbbbaa"));
         System.out.println("=========================================================================");
         System.out.println("Resposta para a questão - Termina em bbb");//validado!
         regex_teste = "[ab]+bbb";
-        System.out.println(Pattern.matches(regex_teste,"bbbb"));
+        System.out.println(Pattern.matches(regex_teste,"babbb"));
         System.out.println(Pattern.matches(regex_teste,"abbb"));        
         System.out.println("==========================================================================");
         System.out.println("Resposta para a questão - Não termina em bbb");//validado!
@@ -51,30 +51,31 @@ public class Respostas {
         System.out.println(Pattern.matches(regex_teste,"ba"));
         System.out.println(Pattern.matches(regex_teste,"bb"));
         System.out.println("===========================================================================");
-        System.out.println("Resposta para a questão - Possuem comprimento par");//dificil validar
+        System.out.println("Resposta para a questão - Possuem comprimento par");//
         regex_teste= "b[ab]+b";
         System.out.println(Pattern.matches(regex_teste,"babb"));
         System.out.println(Pattern.matches(regex_teste,"baab"));        
         System.out.println("==========================================================================");
-        System.out.println("Resposta para a questão - Possuem comprimento ímpar");//dificil validar
+        System.out.println("Resposta para a questão - Possuem comprimento ímpar");//
         regex_teste= "b+[ab]+b";
         System.out.println(Pattern.matches(regex_teste,"bab"));
         System.out.println(Pattern.matches(regex_teste,"bbb"));           
         System.out.println("==========================================================================");
-        System.out.println("Resposta para a questão - Possuem comprimento múltiplo de 4"); //dificil validar   
+        System.out.println("Resposta para a questão - Possuem comprimento múltiplo de 4"); //
         regex_teste= "aa+[ab]+b";
         System.out.println(Pattern.matches(regex_teste,"aaab"));
         System.out.println(Pattern.matches(regex_teste,"aabb"));                       
         System.out.println("==========================================================================");
-        System.out.println("Resposta para a questão - Possuem quantidade par de símbolos a");//dificil validar    
+        System.out.println("Resposta para a questão - Possuem quantidade par de símbolos a");//  
         regex_teste= "aa+[ba]+a";
         System.out.println(Pattern.matches(regex_teste,"aabaa"));
         System.out.println(Pattern.matches(regex_teste,"aaaa"));              
         System.out.println("==========================================================================");
-        System.out.println("Resposta para a questão - Possuem quantidade ímpar de símbolos b"); //dificil validar
+        System.out.println("Resposta para a questão - Possuem quantidade ímpar de símbolos b"); //
         regex_teste= "b+[ab]+b";
         System.out.println(Pattern.matches(regex_teste,"babb"));
         System.out.println(Pattern.matches(regex_teste,"bbb"));   
         System.out.println("==========================================================================");
+        System.out.println("                    Fim!                                    ");
     }
 }
